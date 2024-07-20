@@ -8,81 +8,97 @@
             novalidate
             class="needs-validation"
         >
-            <div class="mb-3">
-                <label for="title" class="form-label">Title</label>
+        <div class="mb-3">
+            <label for="title" class="form-label">Event Title</label>
+            <input
+                name="title"
+                placeholder="DJ Night"
+                id="title"
+                type="text"
+                class="form-control"
+                value="<%= listing.title%>"
+                required
+            />
+            <div class="valid-feedback">Title looks good</div>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label" 
+                >Description</label
+            >
+            <textarea
+                name="description"
+                id="description"
+                class="form-control"
+                required
+            ><%= listing.description%></textarea>
+            <div class="valid-feedback">Description looks good</div>
+            <div class="invalid-feedback">Please enter a description</div>
+
+        </div>
+
+        <div class="mb-3">
+            <label for="image" class="form-label">Image</label>
+            <input
+                name="image"
+                id="image"
+                value="<%= listing.image%>"
+                placeholder="enter image url"
+                type="text"
+                class="form-control"
+                 
+            />
+        </div>
+
+        <div class="row">
+            <div class="mb-3 col-4">
+                <label for="price" class="form-label">Entry Fees</label>
                 <input
-                    name="title"
-                    value="<%=listing.title%>"
-                    type="text"
+                    name="price"
+                    placeholder="1200"
+                    value="<%= listing.price%>"
                     class="form-control"
+                    id="price"
                     required
                 />
-                <div class="invalid-feedback">Enter a catchy title</div>
+            <div class="invalid-feedback">Price should be valid</div>
+
             </div>
 
-            <br />
-            <br />
-            <div class="mb-3">
-                <label for="description" class="form-label">Description</label>
-                <textarea
-                    name="description"
-                    type="text"
-                    class="form-control"
-                    required
-                >
-                    <%=listing.description%></textarea
-                >
-                <div class="invalid-feedback">Please enter a short description</div>
-            </div>
-
-            <div class="mb-3">
-                <label for="image" class="form-label">Image Link</label>
+            <div class="mb-3 col-md-8">
+                <label for="college" class="form-label">College</label>
                 <input
-                    name="image"
-                    value="<%= listing.image%>"
+                    name="college"
+                    placeholder="GLA"
                     type="text"
+                    value="<%= listing.college%>"
                     class="form-control"
+                    id="college"
                     required
                 />
-                <div class="invalid-feedback">Please Enter a valid link for the image</div>
-            </div>
-            <div class="row">
-                <div class="mb-3 col-md-4">
-                    <label for="price" class="form-label">Price</label>
-                    <input
-                        name="price"
-                        value="<%=listing.price%>"
-                        type="number"
-                        class="form-control"
-                        required
-                    />
-                    <div class="invalid-feedback">Price should be valid</div>
-                </div>
+            <div class="invalid-feedback">College name daalde bhai</div>
 
-                <div class="mb-3 col-md-8">
-                    <label for="country" class="form-label">Country</label>
-                    <input
-                        name="country"
-                        value="<%=listing.country%>"
-                        type="text"
-                        class="form-control"
-                        required
-                    />
-                    <div class="invalid-feedback">Country name should be valid</div>
-                </div>
             </div>
+        </div>
+        <div class="row">
+        <div class="mb-3 col-4">
+            <label for="location" class="form-label">Location</label>
+            <input
+                name="location"
+                placeholder="Jaipur,Rajasthan"
+                value="<%= listing.location%>"
+                type="text"
+                id="location"
+                class="form-control"
+                required
+            />
+            <div class="invalid-feedback">Location should be valid</div>
 
-            <div class="mb-3">
-                <label for="location" class="form-label">Location</label>
-                <input
-                    name="location"
-                    value="<%=listing.location%>"
-                    type="text"
-                    class="form-control"
-                    required
-                />
-                <div class="invalid-feedback">Location should be valid</div>
-            </div>
+        </div>
+        <div class="mb-3 col-8">
+            <label for="datetime" class="form-label">Enter Date of Event</label>
+            <input type="datetime-local" value="<%= listing.datetime%>" name="datetime" id="datetime" class="form-control" ></div>
+        </div>
+    </div>
 
             <button class="btn btn-dark edit-btn mt-3">Add</button>
         </form>

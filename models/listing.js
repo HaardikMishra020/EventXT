@@ -22,9 +22,12 @@ const listingSchema = new Schema({
     location: {
         type: String,
     },
-    country: {
+    college: {
         type: String,
     },
+    datetime:{
+        type:Date,
+    }
 });
 
 const Listing = mongoose.model("Listing", listingSchema);

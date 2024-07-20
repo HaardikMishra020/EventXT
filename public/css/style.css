@@ -78,6 +78,7 @@ body{
 .card-body{
     padding: 0 !important;
 }
+
 .card-text p{
     font-weight: 400 !important ;
 }
@@ -93,6 +94,26 @@ body{
 .card-img-overlay:hover{
     opacity: 0.2;
     background-color: white;
+}
+
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.date-tag{
+    font-size: 1.5rem;
+    position: absolute;
+    padding:10px;
+    width:100px;
+    top:0px;
+    left:0px;
+    border-radius: 5px;
+    background-color: #fe424d;
+    opacity: 80%;
+}
+.date-tag:hover{
+    display:block;
+    
 }
 
 /* New Page */

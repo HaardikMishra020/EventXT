@@ -1,20 +1,23 @@
 {
-  "name": "major_project",
+  "name": "eventxt",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "ejs-mate": "^4.0.0",
     "express": "^4.19.2",
     "method-override": "^3.0.0",
     "mongoose": "^8.5.0",
-    "nodemon": "^3.1.4"
+    "nodemon": "^3.1.4",
+    "twitter-api-v2": "^1.17.2"
   }
 }

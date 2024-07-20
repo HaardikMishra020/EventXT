@@ -1,8 +1,8 @@
 <% layout("/layouts/boilerplate")%>
 <body>
-    <h3>All Listings</h3>
+    <h3>All Events</h3>
     <form method="GET" action="/listings/new">
-        <button>Create New Listing</button>
+        <button class="btn btn-secondary form-label">Create New Event</button>
     </form>
     <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
         <% for(let listing of allListings) {%>
@@ -17,14 +17,16 @@
                     <div class="card-img-overlay">
                         
                     </div>
+                    <span class="date-tag"><%=listing.datetime.toString().slice(0,3) %> <br><%=listing.datetime.toString().slice(4,10) %> </span>
                 <div class="card-body">
                     <p class="card-text">
                         <b><%= listing.title %></b> <br />
-                        &#8377;<%= listing.price.toLocaleString("en-IN")%>/night
+                        Tickets starting: &#8377;<%= listing.price.toLocaleString("en-IN")%>
                     </p>
                 </div>
             </div>
         </a>
         <%}%>
-    </div>
+        </div>
+        
 </body>

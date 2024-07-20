@@ -5,10 +5,11 @@
            <h3>Create a new Listing</h3>
             <form method="post" action="/listings" novalidate class="needs-validation">
                 <div class="mb-3">
-                    <label for="title" class="form  -label">Title</label>
+                    <label for="title" class="form-label">Event Title</label>
                     <input
                         name="title"
-                        placeholder="Add a catchy title"
+                        placeholder="DJ Night"
+                        id="title"
                         type="text"
                         class="form-control"
                         required
@@ -21,11 +22,12 @@
                     >
                     <textarea
                         name="description"
+                        id="description"
                         class="form-control"
                         required
                     ></textarea>
                     <div class="valid-feedback">Description looks good</div>
-                    <div class="invalid-feedback">Please enter a short description</div>
+                    <div class="invalid-feedback">Please enter a description</div>
 
                 </div>
 
@@ -33,6 +35,7 @@
                     <label for="image" class="form-label">Image</label>
                     <input
                         name="image"
+                        id="image"
                         placeholder="enter image url"
                         type="text"
                         class="form-control"
@@ -42,11 +45,12 @@
 
                 <div class="row">
                     <div class="mb-3 col-4">
-                        <label for="price" class="form-label">Price</label>
+                        <label for="price" class="form-label">Entry Fees</label>
                         <input
                             name="price"
                             placeholder="1200"
                             class="form-control"
+                            id="price"
                             required
                         />
                     <div class="invalid-feedback">Price should be valid</div>
@@ -54,31 +58,38 @@
                     </div>
 
                     <div class="mb-3 col-md-8">
-                        <label for="country" class="form-label">Country</label>
+                        <label for="college" class="form-label">College</label>
                         <input
-                            name="country"
-                            placeholder="India"
+                            name="college"
+                            placeholder="GLA"
                             type="text"
                             class="form-control"
+                            id="college"
                             required
                         />
-                    <div class="invalid-feedback">Country name should be valid</div>
+                    <div class="invalid-feedback">College name daalde bhai</div>
 
                     </div>
                 </div>
-
-                <div class="mb-3">
+                <div class="row">
+                <div class="mb-3 col-4">
                     <label for="location" class="form-label">Location</label>
                     <input
                         name="location"
-                        placeholder="Jaipur,Rajsthan"
+                        placeholder="Jaipur,Rajasthan"
                         type="text"
+                        id="location"
                         class="form-control"
                         required
                     />
                     <div class="invalid-feedback">Location should be valid</div>
 
                 </div>
+                <div class="mb-3 col-8">
+                    <label for="datetime" class="form-label">Enter Date of Event</label>
+                    <input type="datetime-local" name="datetime" id="datetime" class="form-control" />
+                </div>
+            </div>
                 <button class="btn btn-dark add-btn mt-3">Add</button>
             </form>
         </div>
